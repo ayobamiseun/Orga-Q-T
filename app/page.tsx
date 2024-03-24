@@ -184,7 +184,15 @@ function Home() {
         </AddModal>
       </div>
       <div className="mt-8 space-y-8">
-        {Object.keys(questions).map(questionId => (
+        {questions === null ? (
+           <p className="text-[red]">No questions available. Add Question </p>
+      ) : Object.keys(questions).length === 0 || null ? (
+          <div>
+            <p className="text-[red]">No questions available. Add Question </p>
+            {/* Render your register button or any message here */}
+          </div>
+        ) : (
+        Object.keys(questions).map(questionId => (
           <div key={questionId}>
             <div className="flex items-start">
               <div>
@@ -228,8 +236,7 @@ function Home() {
               </button>
             </div>
           </div>
-        ))}
-
+        )))}
 
 
       </div>
