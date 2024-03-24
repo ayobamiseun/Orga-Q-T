@@ -7,6 +7,7 @@ import { AuthProvider } from "../context/AuthProvider";
 import "./globals.css";
 import { ThemeProvider } from "styled-components";
 import { Toaster } from "react-hot-toast";
+import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -35,9 +36,11 @@ const theme = {
   return (
     <html lang="en">
       <body className={inter.className}>
+         
          <Toaster position="bottom-center" />
          <ThemeProvider theme={theme}>
         <AuthProvider>
+           <NextTopLoader color='#008ED3' showSpinner={true} />
         {children}
         </AuthProvider>
         </ThemeProvider>
