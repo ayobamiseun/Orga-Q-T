@@ -95,7 +95,7 @@ function Home() {
       console.error('Error adding question:', error);
     }
   };
-  const handleEditQuestion = async (questionId: string, updatedQuestion: Question) => {
+  const handleEditQuestion = async (questionId: string, updatedQuestion: Partial<Question>) => {
     setIsEditing(true);
     try {
       const response = await fetchWrapper.put(
