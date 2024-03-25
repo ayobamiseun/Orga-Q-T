@@ -25,6 +25,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "context/AuthProvider.js", "utils/fetchWrapper.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "context/AuthProvider.js", "utils/fetchWrapper.js", "tests/Home.test.js", "tests/Register.test.js"],
   "exclude": ["node_modules"]
 }
